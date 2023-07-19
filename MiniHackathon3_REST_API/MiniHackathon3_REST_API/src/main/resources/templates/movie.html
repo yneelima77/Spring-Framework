@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Movie Info Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css\style.css" rel="stylesheet" media="screen"in/>
+</head>
+<body>
+<div>
+    <h1>Find Movie</h1>
+</div>
+<main class="container">
+    <div class="form">
+        <form class="search-bar" th:action="@{/moviedetails}" th:object="${myMovie}" method="post">
+            <label>
+                <input type="text" placeholder="Movie Name" class="form-control" th:field="*{title}">
+            </label>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+</main>
+</body>
+</html>

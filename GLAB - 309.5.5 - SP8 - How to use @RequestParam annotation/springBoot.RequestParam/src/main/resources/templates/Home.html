@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Country List</h4>
+<tr th:each="country: ${countries}">
+    <td th:text="${country}"></td>
+    <td><br/></td>
+</tr>
+<h4>User List</h4>
+<tr th:each="userList: ${userlist}">
+    <td th:text="${userList.id}"></td>
+    <td th:text="${userList.name}"></td>
+    <td th:text="${userList.email}"></td>
+    <td><br/></td>
+</tr>
+</body>
+</html>

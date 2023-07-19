@@ -1,0 +1,22 @@
+ input[type=text]{
+         width: 20%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         resize: vertical;
+        }
+
+        button{
+        height:40%;
+         background-color: #4CAF50; /* Green */
+         border: none;
+         color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+
+        }

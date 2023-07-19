@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+
+    </style>
+    <title>Movie Details</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="my-3">
+        <h4>Movie</h4>
+        <table class="table-striped" id="movieTable">
+            <thead>
+            <tr>
+                <th><span>Title</span></th>
+                <th><span>Year</span></th>
+                <th><span>Rated</span></th>
+                <th><span>Released</span></th>
+                <th><span>Runtime</span></th>
+                <th><span>Genre</span></th>
+                <th><span>Director</span></th>
+                <th><span>Writer</span></th>
+                <th><span>Actors</span></th>
+                <th><span>Plot</span></th>
+                <th><span>Language</span></th>
+                <th><span>Country</span></th>
+                <th><span>Awards</span></th>
+                <th><span>Poster</span></th>
+                <th><span>Ratings</span></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <!-- <tr th:each="movie: ${movieList}"> -->
+            <tr>
+                <td th:text="${movie.title}"></td>
+                <td th:text="${movie.year}"></td>
+                <td th:text="${movie.rated}"></td>
+                <td th:text="${movie.released}"></td>
+                <td th:text="${movie.runtime}"></td>
+                <td th:text="${movie.genre}"></td>
+                <td th:text="${movie.director}"></td>
+                <td th:text="${movie.writer}"></td>
+                <td th:text="${movie.actors}"></td>
+                <td th:text="${movie.plot}" id="plotCell"></td>
+                <td th:text="${movie.language}"></td>
+                <td th:text="${movie.country}"></td>
+                <td th:text="${movie.awards}"></td>
+                <td id="posterCell"><img alt="Movie Poster" th:src="${movie.poster}" ></td>
+                <!--<td th:text="${movie.ratings.get('Rotten Tomatoes')}"></td>-->
+                <td>
+                    <span th:if="${movie.ratings.containsKey('Rotten Tomatoes')}"
+                          th:text="${movie.ratings.get('Rotten Tomatoes')}"></span>
+                    <span th:unless="${movie.ratings.containsKey('Rotten Tomatoes')}">N/A</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

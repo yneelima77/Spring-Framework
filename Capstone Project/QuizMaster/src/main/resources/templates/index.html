@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Master</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <title>Bootstrap Navbar with Dropdown</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="external-script.js"></script>
+</head>
+<body>
+<div class="m-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container-fluid" style="color: white; font-weight:bold;">
+            <a href="index.html" class="navbar-brand">Quiz Master</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="python.html" target="_self" class="nav-item nav-link active">Python</a>
+                    <a href="java.html" target="_self" class="nav-item nav-link active">Java</a>
+                    <a href="sql.html" target="_self" class="nav-item nav-link active">SQL</a>
+
+                </div>
+                <form class="d-flex">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="button" class="btn btn-secondary"><i class="bi-search"></i></button>
+                    </div>
+                </form>
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Login</a>
+                            <a href="#" class="dropdown-item">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="page1">
+        <h2>Quiz Master: Learn Coding Online and Test Your Knowledge</h2>
+
+        <div class="p-5 my-4 bg-light rounded-3" style="text-align: left;">
+            <h4>Python</h4>
+            <p>Python is a programming language useful for web development, data analysis, scientific computing,
+                artificial intelligence, and automation, among other applications.</p>
+            <p><a href="python.html" target="_self" class="btn btn-success">Learn Python &raquo;</a>
+                <a href="quiz.html" target="_self" class="btn btn-success">Python Quiz &raquo;</a>
+            </p>
+        </div>
+        <div class="p-5 my-4 bg-light rounded-3" style="text-align: left;">
+            <h4>Java</h4>
+            <p>Java is a programming language utilized in the creation of mobile applications, web applications,
+                software, and games, among other things. Java is renowned for its "write once, run anywhere"
+                philosophy, which means that code written in Java can be compiled into platform-independent bytecode
+                that can execute on any device having the JVM.</p>
+            <p><a href="java.html" target="_self" class="btn btn-success">Learn Java &raquo;</a>
+                <a href="quiz.html" target="_self" class="btn btn-success">Java Quiz &raquo;</a>
+            </p>
+        </div>
+        <div class="p-5 my-4 bg-light rounded-3" style="text-align: left;">
+            <h4>SQL</h4>
+            <p>A database can be used to store, retrieve, and manage data using SQL, a standard database language.
+                Users can query the database to obtain information as well as create, modify, and delete database
+                tables. Web development, data analysis, and business intelligence all frequently use SQL.</p>
+            <p><a href="sql.html" target="_self" class="btn btn-success">Learn SQL &raquo;</a>
+                <a href="quiz.html" target="_self" class="btn btn-success">SQL Quiz &raquo;</a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
